@@ -1,154 +1,53 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>BekasOnly | Toko Barang Bekas Premium</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <h1>BekasOnly</h1>
     <p>Toko Barang Bekas Premium dengan Harga Terbaik</p>
+    <div id="cart-icon">🛒 <span id="cart-count">0</span></div>
   </header>
 
-  <nav>
+  <nav id="main-nav">
     <a href="#elektronik">Elektronik</a>
     <a href="#fashion">Fashion</a>
     <a href="#aksesoris">Aksesoris</a>
     <a href="#rumah">Rumah Tangga</a>
     <a href="#buku">Buku</a>
     <a href="#koleksi">Koleksi</a>
+    <a id="admin-link" href="admin.html">Admin</a>
   </nav>
 
-  <div class="container">
+  <main class="container" id="product-container">
+    <p class="loading">Memuat produk...</p>
+  </main>
 
-    <!-- ELEKTRONIK -->
-    <h2 id="elektronik" class="category-title">Elektronik</h2>
-    <div class="products">
-      <div class="card">
-        <img src="https://source.unsplash.com/400x300/?laptop,used" alt="Laptop Bekas">
-        <div class="card-content">
-          <h3>Laptop Bekas ASUS</h3>
-          <p>Kondisi 90%, performa masih cepat dan bersih.</p>
-          <p class="price">Rp 3.200.000</p>
-          <a class="btn order-btn" data-msg="Halo saya tertarik dengan Laptop Bekas ASUS">Pesan via WhatsApp</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/400x300/?smartphone,used" alt="HP Bekas">
-        <div class="card-content">
-          <h3>iPhone X Bekas</h3>
-          <p>Kondisi mulus, baterai 85%, lengkap dengan box.</p>
-          <p class="price">Rp 4.800.000</p>
-          <a class="btn order-btn" data-msg="Halo saya tertarik dengan iPhone X Bekas">Pesan via WhatsApp</a>
-        </div>
-      </div>
-    </div>
+  <footer>
+    © 2025 BekasOnly — Barang Bekas Premium, Harga Bersahabat<br/>
+    Hubungi kami di <a id="wa-footer" href="#" target="_blank">WhatsApp</a>
+  </footer>
 
-    <!-- FASHION -->
-    <h2 id="fashion" class="category-title">Fashion</h2>
-    <div class="products">
-      <div class="card">
-        <img src="https://source.unsplash.com/400x300/?clothes,thrift" alt="Jaket Denim Bekas">
-        <div class="card-content">
-          <h3>Jaket Denim Vintage</h3>
-          <p>Original Levi’s, kondisi 95%, size M.</p>
-          <p class="price">Rp 250.000</p>
-          <a class="btn order-btn" data-msg="Halo saya tertarik dengan Jaket Denim Vintage">Pesan via WhatsApp</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/400x300/?shoes,used" alt="Sepatu Bekas">
-        <div class="card-content">
-          <h3>Sepatu Nike Air Bekas</h3>
-          <p>Size 42, kondisi 85%, masih sangat nyaman.</p>
-          <p class="price">Rp 400.000</p>
-          <a class="btn order-btn" data-msg="Halo saya tertarik dengan Sepatu Nike Air Bekas">Pesan via WhatsApp</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- AKSESORIS -->
-    <h2 id="aksesoris" class="category-title">Aksesoris</h2>
-    <div class="products">
-      <div class="card">
-        <img src="https://source.unsplash.com/400x300/?watch,vintage" alt="Jam Tangan Bekas">
-        <div class="card-content">
-          <h3>Jam Tangan Casio Vintage</h3>
-          <p>Kondisi sangat baik, baterai baru diganti.</p>
-          <p class="price">Rp 180.000</p>
-          <a class="btn order-btn" data-msg="Halo saya tertarik dengan Jam Tangan Casio Vintage">Pesan via WhatsApp</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/400x300/?bag,leather,used" alt="Tas Kulit Bekas">
-        <div class="card-content">
-          <h3>Tas Kulit Bekas Premium</h3>
-          <p>Asli kulit sapi, kondisi 90%, tanpa sobek.</p>
-          <p class="price">Rp 350.000</p>
-          <a class="btn order-btn" data-msg="Halo saya tertarik dengan Tas Kulit Bekas Premium">Pesan via WhatsApp</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- RUMAH TANGGA -->
-    <h2 id="rumah" class="category-title">Rumah Tangga</h2>
-    <div class="products">
-      <div class="card">
-        <img src="https://source.unsplash.com/400x300/?furniture,used" alt="Meja Bekas">
-        <div class="card-content">
-          <h3>Meja Kayu Minimalis</h3>
-          <p>Kondisi baik, finishing halus, cocok untuk ruang kerja.</p>
-          <p class="price">Rp 500.000</p>
-          <a class="btn order-btn" data-msg="Halo saya tertarik dengan Meja Kayu Minimalis">Pesan via WhatsApp</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/400x300/?lamp,used" alt="Lampu Bekas">
-        <div class="card-content">
-          <h3>Lampu Hias Retro</h3>
-          <p>Masih menyala terang, desain klasik elegan.</p>
-          <p class="price">Rp 150.000</p>
-          <a class="btn order-btn" data-msg="Halo saya tertarik dengan Lampu Hias Retro">Pesan via WhatsApp</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- BUKU -->
-    <h2 id="buku" class="category-title">Buku</h2>
-    <div class="products">
-      <div class="card">
-        <img src="https://source.unsplash.com/400x300/?book,used" alt="Buku Bekas">
-        <div class="card-content">
-          <h3>Novel Bekas “Laskar Pelangi”</h3>
-          <p>Kondisi 95%, halaman lengkap, cover utuh.</p>
-          <p class="price">Rp 45.000</p>
-          <a class="btn order-btn" data-msg="Halo saya tertarik dengan Novel Laskar Pelangi">Pesan via WhatsApp</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- KOLEKSI -->
-    <h2 id="koleksi" class="category-title">Koleksi</h2>
-    <div class="products">
-      <div class="card">
-        <img src="https://source.unsplash.com/400x300/?vinyl,record,vintage" alt="Piringan Hitam">
-        <div class="card-content">
-          <h3>Piringan Hitam The Beatles</h3>
-          <p>Koleksi langka, suara jernih, cover original.</p>
-          <p class="price">Rp 1.200.000</p>
-          <a class="btn order-btn" data-msg="Halo saya tertarik dengan Piringan Hitam The Beatles">Pesan via WhatsApp</a>
-        </div>
+  <div id="cart-modal" class="hidden">
+    <div class="cart-content">
+      <h2>Keranjang Belanja</h2>
+      <ul id="cart-list"></ul>
+      <div class="cart-actions">
+        <button id="send-whatsapp" class="btn">Kirim Pesanan via WhatsApp</button>
+        <button id="clear-cart" class="btn cancel">Kosongkan Keranjang</button>
+        <button id="close-cart" class="btn cancel">Tutup</button>
       </div>
     </div>
   </div>
 
-  <footer>
-    © 2025 BekasOnly — Barang Bekas Premium, Harga Bersahabat<br>
-    Hubungi kami di <a id="wa-link" href="#" style="color:#ffdca2;text-decoration:none;">WhatsApp</a>
-  </footer>
-
+  <!-- Firebase config (you must fill in your project's config in firebase-config.js) -->
+  <script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

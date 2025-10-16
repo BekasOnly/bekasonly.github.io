@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin BekasOnly</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .admin-wrap{max-width:980px;margin:24px auto;padding:12px}
+    .card-form{background:#fff;padding:12px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+    label{display:block;margin:8px 0 4px;font-weight:600}
+    input[type=text], textarea, select{width:100%;padding:8px;border:1px solid #ddd;border-radius:6px}
+    .product-row{display:flex;gap:12px;align-items:center;padding:8px 0;border-bottom:1px solid #eee}
+    .product-row img{width:80px;height:60px;object-fit:cover;border-radius:6px}
+    .top-actions{display:flex;gap:8px;align-items:center;margin-bottom:12px}
+  </style>
+</head>
+<body>
+  <header><h1>Admin BekasOnly</h1></header>
+  <main class="admin-wrap">
+    <div id="auth-section" class="card-form">
+      <h2>Login Admin</h2>
+      <div id="auth-forms">
+        <input id="email" type="text" placeholder="email admin" />
+        <input id="password" type="text" placeholder="password" />
+        <div style="margin-top:8px">
+          <button id="btn-login" class="btn">Login</button>
+          <button id="btn-logout" class="btn cancel hidden">Logout</button>
+        </div>
+        <p id="auth-msg" style="color:#b33;margin-top:8px"></p>
+      </div>
+    </div>
+
+    <div id="admin-panel" class="hidden">
+      <div class="top-actions">
+        <button id="btn-refresh" class="btn">Muat Ulang Produk</button>
+        <button id="btn-new" class="btn">Tambah Produk Baru</button>
+        <span style="margin-left:auto">Masuk sebagai: <strong id="admin-email"></strong></span>
+      </div>
+
+      <div id="product-list" class="card-form"></div>
+
+      <div id="product-form" class="card-form hidden">
+        <h3 id="form-title">Tambah Produk</h3>
+        <label>Nama</label><input id="p-name" type="text" />
+        <label>Deskripsi</label><textarea id="p-desc" rows="3"></textarea>
+        <label>Harga (format: Rp ...)</label><input id="p-price" type="text" />
+        <label>Kategori</label>
+        <select id="p-cat">
+          <option>Elektronik</option>
+          <option>Fashion</option>
+          <option>Aksesoris</option>
+          <option>Rumah Tangga</option>
+          <option>Buku</option>
+          <option>Koleksi</option>
+        </select>
+        <label>URL Gambar (atau kosong untuk gambar default)</label>
+        <input id="p-img" type="text" />
+        <div style="margin-top:10px">
+          <button id="save-product" class="btn">Simpan</button>
+          <button id="cancel-product" class="btn cancel">Batal</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

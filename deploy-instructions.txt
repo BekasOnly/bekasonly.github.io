@@ -1,0 +1,13 @@
+DEPLOY INSTRUCTIONS (singkat)
+1) Firebase:
+   - npm install -g firebase-tools
+   - firebase login
+   - firebase init (pilih Hosting + Firestore jika mau)
+   - place files in 'public' folder then firebase deploy
+
+2) Netlify:
+   - Push repo to GitHub
+   - Drag & drop ZIP to Netlify UI, or connect GitHub repo and deploy
+
+3) Vercel:
+   - Connect GitHub repo and deploy as a static site
